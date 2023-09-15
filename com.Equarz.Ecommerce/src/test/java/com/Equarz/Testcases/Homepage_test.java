@@ -1,24 +1,20 @@
 package com.Equarz.Testcases;
 
-
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.Pageobjects.Homepage_functionality;
 import com.Pageobjects.Login_Functionality;
 import com.Utils.Utils;
 import com.base.Testbase;
 
-
-public class LoginTest extends Testbase {
+public class Homepage_test extends Testbase {
+	
+	Homepage_functionality hf;
 	
 	
-	//WebDriver driver;
-	Login_Functionality lg;
-	
-	
-	public LoginTest()
+	public Homepage_test()
 	{
 		super();
 	}
@@ -26,7 +22,7 @@ public class LoginTest extends Testbase {
 	public void intialization()
 	{
 		Setup();
-		lg= new Login_Functionality(driver);
+		hf= new Homepage_functionality(driver);
 		
 	}
 //	@Test(priority = 1)
@@ -35,15 +31,12 @@ public class LoginTest extends Testbase {
 //		lg.Verifylogin();
 //	
 //	}
-	@Test(dataProvider = "setdata",dataProviderClass = Utils.class)
-	public void verifyurl(String username, String password) throws InterruptedException {
+	@Test()
+	public void validateaddtocart() throws InterruptedException {
 		
-		lg.Verifylogin(username,password);
+		hf.verifyaddtocart();
 		String url = driver.getCurrentUrl();
-		Assert.assertEquals("http://e-quarz.com/", url);
+		Assert.assertEquals("http://e-quarz.com/product/mouse-hp-hHfrUI", url);
 	}
-	
-
-
 
 }

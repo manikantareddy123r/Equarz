@@ -15,14 +15,14 @@ public class Testbase {
 
 	FileInputStream file;
 	public static Properties props;
-	public static WebDriver driver;
+	public  WebDriver driver;
 
 	public Testbase() {
 		
 		props = new Properties();
 
 		try {
-			file = new FileInputStream("./src/main/java/com/PropertiesConfig/Propfile");
+			file = new FileInputStream("C:\\Users\\ADMIN\\git\\Eccomerce_Project\\com.Equarz.Ecommerce\\src\\main\\java\\com\\PropertiesConfig\\Propfile");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -54,9 +54,9 @@ public class Testbase {
 
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
-		driver.get(props.getProperty("url"));
+		driver.get(props.getProperty("url1"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		driver.manage().deleteAllCookies();
+		//driver.manage().deleteAllCookies();
 		
 		
 	}
