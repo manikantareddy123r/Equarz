@@ -14,13 +14,13 @@ import org.testng.annotations.DataProvider;
 import com.Pageobjects.Homepage;
 import com.base.Testbase;
 
-public class Utils extends Testbase {
+public class Address_Utils extends Testbase {
 	
-   @DataProvider
+@DataProvider
 	
 	public String[][] setdata() throws IOException
 	{
-		File file=new File("C:\\Users\\ADMIN\\git\\Eccomerce_Project\\com.Equarz.Ecommerce\\src\\main\\java\\com\\testdata\\signupexceldata.xlsx");
+		File file=new File("C:\\Users\\ADMIN\\git\\Eccomerce_Project\\com.Equarz.Ecommerce\\src\\main\\java\\com\\testdata\\Address.xlsx");
 		FileInputStream stream=new FileInputStream(file);
 		XSSFWorkbook workbook=new XSSFWorkbook(stream);
 		XSSFSheet sheet=workbook.getSheetAt(0);
@@ -44,14 +44,5 @@ public class Utils extends Testbase {
 		
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

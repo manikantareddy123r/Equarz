@@ -35,10 +35,13 @@ public class LoginTest extends Testbase {
 //		lg.Verifylogin();
 //	
 //	}
-	@Test(dataProvider = "setdata",dataProviderClass = Utils.class)
-	public void verifyurl(String username, String password) throws InterruptedException {
+	//@Test(dataProvider = "setdata",dataProviderClass = Utils.class)
+	@Test
+	//public void verifyurl(String username, String password) throws InterruptedException {
+	
+	public void verifyurl() throws InterruptedException {
 		
-		lg.Verifylogin(username,password);
+		lg.verifylogin();
 		String url = driver.getCurrentUrl();
 		Assert.assertEquals("http://e-quarz.com/", url);
 	}

@@ -3,12 +3,27 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Equarz.Testcases.signupTest">
+      <class name="com.Equarz.Testcases.Homelinks_testcases">
         <methods>
-          <include name="intialization"/>
-          <include name="verifyurl" invocation-numbers="0"/>
+          <include name="google"/>
+          <include name="facebook"/>
+          <include name="login"/>
+          <include name="pinterest"/>
+          <include name="sellingproducts"/>
+          <include name="insta"/>
+          <include name="trackorder"/>
+          <include name="toprated"/>
+          <include name="returnpolicy"/>
+          <include name="initialize"/>
+          <include name="teardown"/>
+          <include name="refundpolicy"/>
+          <include name="twitter"/>
+          <include name="supportticket"/>
+          <include name="search"/>
+          <include name="profileinfo"/>
+          <include name="linkedin"/>
         </methods>
-      </class> <!-- com.Equarz.Testcases.signupTest -->
+      </class> <!-- com.Equarz.Testcases.Homelinks_testcases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
