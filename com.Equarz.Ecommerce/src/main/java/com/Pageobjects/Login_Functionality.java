@@ -33,11 +33,16 @@ public class Login_Functionality extends Testbase {
 		PageFactory.initElements(driver, this);
 	}
 
-	public Homepage Verifylogin(String username1,String password1) throws InterruptedException {
+	//public Homepage Verifylogin(String username1,String password1) throws InterruptedException {
+	public Homepage verifylogin() throws InterruptedException {
 
-		username.sendKeys(username1);
-		password.sendKeys(password1);
+		//username.sendKeys(username1);
+		//password.sendKeys(password1);
+	
 		//captcha.sendKeys(str);
+		
+		username.sendKeys(props.getProperty("username"));
+		password.sendKeys(props.getProperty("password"));
 		Thread.sleep(10000);
 		signinbtn.click();
 
