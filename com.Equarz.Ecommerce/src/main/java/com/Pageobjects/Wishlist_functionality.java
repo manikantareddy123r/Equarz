@@ -14,14 +14,14 @@ import com.base.Testbase;
 public class Wishlist_functionality extends Testbase {
 	
 	
-	@FindBy(xpath="//span[text()='TVs & Appliances']")
+	@FindBy(xpath="//span[text()='Electronics']")
 	
 	WebElement cat;
-	@FindBy(xpath="//span[text()='Microwave oven']")
+	@FindBy(xpath="//span[text()='Mobile Accessoires']")
 	WebElement subcat;
-	@FindBy(xpath="//a[text()='Premium']")
+	@FindBy(xpath="//a[text()='Cases And Covers']")
 	WebElement subsub;
-	@FindBy(xpath="//a[@href='http://e-quarz.com/product/whirlpool-20-l-solo-microwave-oven-magicook-pro-20se-black-0SpMnj']")
+	@FindBy(xpath="//a[@href='http://e-quarz.com/product/iphone-14-back-cover-caseslim-fit-shockproof-designcamera-protection-bumptransparent-back-cover-44Dx1N']")
     WebElement product;
 	@FindBy(xpath="//i[@class='fa fa-heart-o ']")
 	WebElement wishlist;
